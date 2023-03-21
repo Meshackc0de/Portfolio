@@ -19,29 +19,51 @@ html {
     /*padding: 2rem 4rem;*/
     padding: 1em 4em;
     
+    
 
 
 }
-.nav-links {
+.nav-bar > #nav-links {
     display: flex;
     gap: 4rem;
+    position: relative;
+    
     
 
 }
-.nav-links > a {
+.nav-bar > #nav-links > a {
     color: white;
     text-decoration: none;
     /*font-size: 18px;*/
     font-size: 1.5rem;
     cursor: pointer;
+    transition: 0.3 ease;
     
 }
 
-.nav-links > a:hover {
+/*.nav-links > a:hover {
     color: coral;
     transition: all 2s ease;
 
+}*/
+
+.nav-bar > #nav-links > a.active,
+.nav-bar > #nav-links > a:hover {
+    color: coral;
+
+
 }
+.nav-bar > #nav-links > a.active::after,
+.nav-bar > #nav-links > a:hover::after { 
+    content: "";
+    width: 55px;
+    height: 2px;
+    background: coral;
+    position: absolute;
+    bottom: -4px;
+    left: 2px;
+}
+
 .kingsmurf {
     background-color: black;
     min-height: 90dvh;
@@ -91,22 +113,20 @@ html {
 }
 
 .home-content  > a > button {
+    background-image: url("./Images/button.png");
     background-color: transparent;
     color: white;
-    border-radius: 999px;
-    border: 1px solid white;
+    border: 0;
     cursor: pointer;
     /*padding: 1rem 4rem;
     margin-bottom: 5px;*/
-    padding: 1em 4em;
+    padding: 14px 80px 14px 65px;
+    background-repeat: no-repeat;
+    font-size: 15px;
+    font-weight: 700;
     margin-bottom: 1em;
 }
-.home-content  > a > button:hover {
-    background-color: coral;
-    color: black;
-    font-weight: bold;
 
-}
 .resume-part {
     background-color: white;
     /*background: linear-gradient(to left, #83a4d4 , #b6fbff);*/
@@ -209,6 +229,8 @@ html {
 
 
 }
+
+
 
 .inputs-sect  > a > button:hover {
     background-color: white;
