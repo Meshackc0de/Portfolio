@@ -10,6 +10,7 @@
 html {
     scroll-behavior: smooth;
 }
+/*Header section*/
 .nav-bar {
     display: flex;
     justify-content: space-between;
@@ -53,8 +54,8 @@ html {
 
 
 }
-.nav-bar > #nav-links > a.active::after,
-.nav-bar > #nav-links > a:hover::after { 
+.nav-bar > #nav-links > a.active::after {
+
     content: "";
     width: 55px;
     height: 2px;
@@ -64,10 +65,21 @@ html {
     left: 2px;
 }
 
+.nav-bar > #nav-links > a:hover::after { 
+    content: "";
+    width: 55px;
+    height: 2px;
+    background: coral;
+    position: absolute;
+    bottom: -4px;
+    left: 2px;
+}
+/*Home content*/
 .kingsmurf {
     background-color: black;
     min-height: 90dvh;
     padding-bottom: 60px;
+    max-width: 100%;
     /*margin-bottom: 1em;*/
 
 }
@@ -87,7 +99,7 @@ html {
     */
     width: 30rem;
     height: 30rem;
-    border-radius: 2rem;
+    border-radius: 2.2rem;
     padding-left: 1em;
     padding-bottom: 1em;;
 }
@@ -231,10 +243,77 @@ html {
 }
 
 
-
 .inputs-sect  > a > button:hover {
     background-color: white;
     color: black;
     font-weight: bold;
 }
+ /*Mobile responsiveness*/
+@media only screen and (max-width: 378px){
+    /*Home page mobile*/
+    .nav-bar {
+        padding: 1em 1em;
+        width: 24em;
+    }
+    .nav-bar > #nav-links {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        position: relative;
+        font-size: 0.5em;
+    }
+    h1 {
+        font-size: 1em;
+        padding-top: 0;
+       
+    }
 
+    .kingsmurf {
+        background-color: black;
+        min-height: 90dvh;
+        padding-bottom: 60px;
+        width: 25em;
+        /* margin-bottom: 1em; */
+    }
+
+    .home-desc > img {
+        width: 15rem;
+        height: 15rem;
+        
+    }
+
+    .home-desc {
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row;
+        gap: 1em;
+        width: 100%;
+        margin: auto;
+        padding-top: 3rem;
+        padding-left: 0;
+        color: white;
+    }
+
+    .home-content  > a > button {
+        padding: 14px 80px 14px 65px;
+        font-size: 10px;
+        font-weight: 700;
+        margin-bottom: 1em;
+        margin-left: 0;
+    }
+
+    .home-content > h1 {
+        font-size: 2rem;
+        /* margin-bottom: 3rem; */
+        margin-bottom: 0.7em;
+        width: 100%;
+    }
+
+    .home-content > p {
+        width: 100%;
+        /* margin-bottom: 3rem; */
+        margin-bottom: 3.5em;
+        line-height: 1em;
+    }
+
+}
